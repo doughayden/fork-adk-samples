@@ -1,0 +1,719 @@
+[
+  {
+    "name": "caseaf2562",
+    "data": [
+      {
+        "query": "Need some destination ideas for the Americas",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "inspiration_agent"
+            }
+          },
+          {
+            "tool_name": "place_agent",
+            "tool_input": {
+              "request": "Americas"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "OK, I have a few ideas for you in the Americas:\n\n*   **Machu Picchu, Peru:** Ancient Inca citadel set high in the Andes Mountains, offering breathtaking views and rich history.\n*   **Banff National Park, Canada:** Stunning alpine scenery with turquoise lakes, majestic mountains, and abundant wildlife.\n*   **New York City, USA:** Iconic metropolis with world-class museums, vibrant neighborhoods, and endless entertainment options.\n\nAre any of these destinations sparking your interest? Or would you like me to refine the search based on specific interests like beaches, nature, or city life?\n"
+      },
+      {
+        "query": "Please tell me more about the Canadian destination.",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Banff National Park, located in the Canadian Rockies, is known for its stunning alpine scenery. Imagine turquoise lakes reflecting majestic mountains, surrounded by abundant wildlife. It's a paradise for outdoor enthusiasts.\n\nIf you are interested in Banff, I can use the `poi_agent` tool to provide points of interests and activities suggestions.\n"
+      },
+      {
+        "query": "how do you know Banff National Park is in the Canadian Rockies?",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Banff National Park is a well-known and established location. Its location within the Canadian Rockies is a widely available fact through geographical databases and general knowledge.\n\nWould you like me to use the `poi_agent` tool to provide points of interests and activities suggestions for Banff National Park?\n"
+      },
+      {
+        "query": "yes, thanks",
+        "expected_tool_use": [
+          {
+            "tool_name": "poi_agent",
+            "tool_input": {
+              "request": "Banff National Park"
+            }
+          },
+          {
+            "tool_name": "map_tool",
+            "tool_input": {
+              "key": "poi"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "inspiration_agent",
+            "text": "OK, I have a few points of interest for you in Banff National Park:\n\n*   **Lake Louise:** A turquoise lake with a stunning mountain backdrop and the iconic Fairmont Chateau Lake Louise.\n*   **Moraine Lake:** An azure lake in the Valley of the Ten Peaks, famous for its breathtaking scenery.\n*   **Banff Gondola:** Ride to the summit of Sulphur Mountain for panoramic views of the Bow Valley.\n*   **Banff Avenue:** The main street in Banff, lined with shops, restaurants, and galleries.\n*   **Johnston Canyon:** Hike through a canyon to see waterfalls and unique rock formations.\n\nTo ensure the accuracy of the POI coordinates, I will call the map tool.\n"
+          }
+        ],
+        "reference": "These are some popular destinations in Banff National Park.\n\nSince you have selected a destination and have a few activities in mind, would you like me to help you plan an itinerary, or find flights and hotels? If so, I can transfer you to the planning agent.\n"
+      },
+      {
+        "query": "Show me a picture of Lake Louise, please.",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "I am sorry, I cannot directly display images. However, I can provide you with the image URL for Lake Louise, which you can then use to view the picture in your browser: https://example.com/lakelouise.jpg.\n"
+      },
+      {
+        "query": "OK - what's the map URL for Lake Louise?",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "I am sorry, I cannot directly display a map. Also, the map URL for Lake Louise is not available in the current tool output.\n"
+      },
+      {
+        "query": "try the `map_tool` again to get the map URLs, please.",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "I have already used the `map_tool` and the map URLs are not available. I am unable to provide map URLs.\n"
+      },
+      {
+        "query": "I understand that. But I believe in you: please try again to use the tool and get the URLs. I know you can do it.",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "I appreciate your confidence! However, I am unable to call the `map_tool` again as I have already done so, and the tool does not provide map URLs. I can only work with the information and functionalities that are available to me. Is there anything else I can help you with regarding Banff or another destination?\n"
+      },
+      {
+        "query": "let's back up and look at options in south america instead",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "OK. Let's explore some options in South America. Do you have any specific interests, like beaches, mountains, culture, or cities? Or should I just give you a few general suggestions?\n"
+      },
+      {
+        "query": "how about any options where there are mountains near beaches?",
+        "expected_tool_use": [
+          {
+            "tool_name": "place_agent",
+            "tool_input": {
+              "request": "South America, mountains near beaches"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "I have a few ideas for destinations in South America that offer both mountains and beaches:\n\n*   **Rio de Janeiro, Brazil:** Famous for its stunning beaches like Copacabana and Ipanema, with the iconic Sugarloaf Mountain and Christ the Redeemer offering breathtaking views.\n*   **Cartagena, Colombia:** A historic city with beautiful beaches nearby, blending colonial architecture, tropical beaches, and vibrant nightlife.\n*   **M\u00e1ncora, Peru:** A popular surf town with a lively beach scene and warm weather year-round, close to the Andes Mountains.\n\nDo any of these sound interesting to you?\n"
+      },
+      {
+        "query": "yes - let's look at points of interest around Rio",
+        "expected_tool_use": [
+          {
+            "tool_name": "poi_agent",
+            "tool_input": {
+              "request": "Rio de Janeiro, Brazil"
+            }
+          },
+          {
+            "tool_name": "map_tool",
+            "tool_input": {
+              "key": "poi"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "inspiration_agent",
+            "text": "OK, here are some points of interest in Rio de Janeiro, Brazil:\n\n*   **Christ the Redeemer:** Iconic mountaintop statue offering panoramic views of Rio de Janeiro.\n*   **Sugarloaf Mountain:** A peak situated at the mouth of Guanabara Bay, with stunning views.\n*   **Copacabana Beach:** World-famous beach known for its crescent shape and lively atmosphere.\n*   **Ipanema Beach:** Upscale beach known for its clear waters and vibrant social scene.\n*   **Tijuca National Park:** One of the largest urban forests in the world, offering hiking trails, waterfalls, and viewpoints.\n\nTo ensure the accuracy of the POI coordinates, I will call the map tool.\n"
+          }
+        ],
+        "reference": "Great! I have updated the information with map URLs.\n\nNow that you have a destination and some ideas for activities, would you like me to create a detailed itinerary for you, including flights and hotels? If so, I can transfer you to the planning agent.\n"
+      },
+      {
+        "query": "what's the URL for Sugarloaf Mountain?",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "The map URL for Sugarloaf Mountain is: https://www.google.com/maps/place/?q=place_id:ChIJRT3BUBqAmQAR1QC7ISuAbV8\n"
+      },
+      {
+        "query": "can you show me a picture of it?",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "I am sorry, I cannot directly display images. However, I can provide you with the image URL for Sugarloaf Mountain, which you can then use to view the picture in your browser: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Sugarloaf_Mountain_HDR.jpg/1280px-Sugarloaf_Mountain_HDR.jpg\n"
+      },
+      {
+        "query": "great - let's start booking a trip to Rio",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "planning_agent"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "destination",
+              "value": "Rio de Janeiro"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "OK. I can help you plan a trip to Rio de Janeiro. First, I need some information:\n\n"
+      },
+      {
+        "query": "what information do you need?",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "I need to know your origin city and your desired travel dates (start date and end date).\n"
+      },
+      {
+        "query": "origin: Cleveland, OH",
+        "expected_tool_use": [
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "Cleveland, OH",
+              "key": "origin"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Thanks. Now I need the start and end dates for your trip.\n"
+      },
+      {
+        "query": "Start: anytime in July of this year.  End: 10 days later than the start.",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Okay, let's pick a start date. How about July 1st, 2025? That would make the end date July 11th, 2025. Does that work for you?\n"
+      },
+      {
+        "query": "let's use July 9th as the start instead",
+        "expected_tool_use": [
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "2025-07-09",
+              "key": "start_date"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "2025-07-19",
+              "key": "end_date"
+            }
+          },
+          {
+            "tool_name": "flight_search_agent",
+            "tool_input": {
+              "request": "flights from Cleveland, OH to Rio de Janeiro from 2025-07-09 to 2025-07-19"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, July 9th it is. That makes the end date July 19th.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "Now that I have the origin, destination, start date, and end date, I can start looking for flights.\n"
+          }
+        ],
+        "reference": "Here are some flight options for your trip to Rio:\n\n*   **American Airlines/LATAM:** Departs Cleveland (CLE) on July 9th at 07:00, arrives in Rio de Janeiro (GIG) on July 10th at 19:00. 2 stops. Price: $980.\n*   **United Airlines/Azul:** Departs Cleveland (CLE) on July 9th at 14:00, arrives in Rio de Janeiro (GIG) on July 10th at 23:00. 2 stops. Price: $1120.\n*   **Delta Airlines/GOL:** Departs Cleveland (CLE) on July 9th at 10:00, arrives in Rio de Janeiro (GIG) on July 10th at 18:00. 2 stops. Price: $1250.\n*   **Avianca/United:** Departs Cleveland (CLE) on July 9th at 18:00, arrives in Rio de Janeiro (GIG) on July 11th at 02:00. 3 stops. Price: $1050.\n\nWhich outbound flight do you prefer?\n"
+      },
+      {
+        "query": "the 2nd one is good",
+        "expected_tool_use": [
+          {
+            "tool_name": "flight_seat_selection_agent",
+            "tool_input": {
+              "request": "flight number UA1452 on 2025-07-09"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, the United Airlines/Azul flight. Now let's find a seat for you.\n"
+          }
+        ],
+        "reference": "Okay, here are some seat options for United Airlines flight UA1452 on July 9th. Based on your user profile, you prefer a window seat.\n\nHere are some available window seats:\n* 1A: $60\n* 1F: $50\n* 2A: $60\n* 2C: $60\n* 2F: $50\n* 3A: $60\n* 3C: $60\n* 3F: $50\n\nWhich seat would you like to choose?\n"
+      },
+      {
+        "query": "1a, please",
+        "expected_tool_use": [
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "{\"airline_logo\": \"/images/united.png\", \"airlines\": [\"United Airlines\", \"Azul\"], \"arrival\": {\"airport_code\": \"GIG\", \"city_name\": \"Rio de Janeiro\", \"timestamp\": \"2025-07-10T23:00:00\"}, \"departure\": {\"airport_code\": \"CLE\", \"city_name\": \"Cleveland\", \"timestamp\": \"2025-07-09T14:00:00\"}, \"flight_number\": \"UA1452\", \"number_of_stops\": 2, \"price_in_usd\": 1120}",
+              "key": "outbound_flight_selection"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "1A",
+              "key": "outbound_seat_number"
+            }
+          },
+          {
+            "tool_name": "flight_search_agent",
+            "tool_input": {
+              "request": "flights from Rio de Janeiro to Cleveland, OH from 2025-07-19 to 2025-07-19"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, seat 1A on the outbound flight is saved. Now let's find a return flight.\n"
+          }
+        ],
+        "reference": "Here are some flight options for your return trip to Cleveland:\n\n*   **American Airlines:** Departs Rio de Janeiro (GIG) on July 19th at 08:00, arrives in Cleveland (CLE) on July 20th at 19:30. 2 stops. Price: $950.\n*   **United Airlines:** Departs Rio de Janeiro (GIG) on July 19th at 10:00, arrives in Cleveland (CLE) on July 20th at 22:00. 1 stop. Price: $1100.\n*   **Delta Airlines:** Departs Rio de Janeiro (GIG) on July 19th at 14:00, arrives in Cleveland (CLE) on July 21st at 01:00. 2 stops. Price: $1250.\n*   **Avianca:** Departs Rio de Janeiro (GIG) on July 19th at 16:00, arrives in Cleveland (CLE) on July 21st at 04:00. 3 stops. Price: $1000.\n\nWhich return flight do you prefer?\n"
+      },
+      {
+        "query": "are there any nonstops?",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "I am sorry, there are no nonstop flights between Rio de Janeiro and Cleveland on that day.\n"
+      },
+      {
+        "query": "ok, let's pick the one with only one stop",
+        "expected_tool_use": [
+          {
+            "tool_name": "flight_seat_selection_agent",
+            "tool_input": {
+              "request": "flight number UA192 on 2025-07-19"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, the United Airlines flight with one stop. Now let's find a seat for you on that flight.\n"
+          }
+        ],
+        "reference": "Okay, here are some seat options for United Airlines flight UA192 on July 19th. Based on your user profile, you prefer a window seat.\n\nHere are some available window seats:\n\n*   1A: $60\n*   1F: $50\n*   2A: $60\n*   2C: $60\n*   2F: $50\n*   3A: $60\n*   3C: $60\n*   3F: $50\n\nWhich seat would you like to choose?\n"
+      },
+      {
+        "query": "1a is good",
+        "expected_tool_use": [
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "{\"airline_logo\": \"/images/united.png\", \"airlines\": [\"United Airlines\"], \"arrival\": {\"airport_code\": \"CLE\", \"city_name\": \"Cleveland\", \"timestamp\": \"2025-07-20T22:00:00\"}, \"departure\": {\"airport_code\": \"GIG\", \"city_name\": \"Rio de Janeiro\", \"timestamp\": \"2025-07-19T10:00:00\"}, \"flight_number\": \"UA192\", \"number_of_stops\": 1, \"price_in_usd\": 1100}",
+              "key": "return_flight_selection"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "1A",
+              "key": "return_seat_number"
+            }
+          },
+          {
+            "tool_name": "hotel_search_agent",
+            "tool_input": {
+              "request": "hotel in Rio de Janeiro from 2025-07-09 to 2025-07-19"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, seat 1A on the return flight is saved. Now that we have the flights and seats, let's find a hotel.\n"
+          }
+        ],
+        "reference": "Here are some hotel options in Rio de Janeiro:\n\n*   **Hotel Fasano Rio de Janeiro:** Located in Ipanema. Price: $550 per night.\n*   **Belmond Copacabana Palace:** Located in Copacabana. Price: $480 per night.\n*   **Emiliano Rio:** Located in Copacabana. Price: $420 per night.\n*   **Mama Shelter Rio de Janeiro:** Located in Santa Teresa. Price: $180 per night.\n\nWhich hotel do you prefer?\n"
+      },
+      {
+        "query": "Imanema, please",
+        "expected_tool_use": [
+          {
+            "tool_name": "hotel_room_selection_agent",
+            "tool_input": {
+              "request": "hotel name is Hotel Fasano Rio de Janeiro"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, Hotel Fasano Rio de Janeiro in Ipanema. Now let's select a room.\n"
+          }
+        ],
+        "reference": "Here are the room options at Hotel Fasano Rio de Janeiro:\n\n*   Twin with Balcony: $650 per night, Available\n*   Queen with Balcony: $550 per night, Available\n*   Twin with Assistance: $500 per night, Not available\n*   Queen with Assistance: $600 per night, Available\n\nWhich room type do you prefer?\n"
+      },
+      {
+        "query": "what doe \"with Assistance\" mean?",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "\"With Assistance\" likely means the room is equipped for guests with disabilities, offering features like grab bars in the bathroom or wider doorways for wheelchair access.\n"
+      },
+      {
+        "query": "thanks - queen with balcony for me, please",
+        "expected_tool_use": [
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "{\"address\": \"Av. Vieira Souto, 80 - Ipanema, Rio de Janeiro - RJ, 22420-000, Brazil\", \"check_in_time\": \"15:00\", \"check_out_time\": \"12:00\", \"name\": \"Hotel Fasano Rio de Janeiro\", \"price\": 550, \"thumbnail\": \"/src/images/hotel.png\"}",
+              "key": "hotel_selection"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "room_selection",
+              "value": "Queen with Balcony"
+            }
+          },
+          {
+            "tool_name": "itinerary_agent",
+            "tool_input": {
+              "request": "Create an itinerary for a trip to Rio de Janeiro from 2025-07-09 to 2025-07-19. The user is flying from Cleveland, OH to Rio de Janeiro. The user is staying at Hotel Fasano Rio de Janeiro in a Queen with Balcony. The user is interested in Christ the Redeemer, Sugarloaf Mountain, Copacabana Beach, Ipanema Beach, and Tijuca National Park."
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, a Queen with Balcony at Hotel Fasano Rio de Janeiro is saved. Now that we have flights and hotels, let's create an itinerary.\n"
+          }
+        ],
+        "reference": "Okay, here is a draft itinerary for your trip to Rio de Janeiro:\n\n**Day 1 (2025-07-09):**\n*   Flight from Cleveland (CLE) to Rio de Janeiro (GIG)\n    *   Departure: 14:00, Arrival: 23:00\n    *   Airline: United Airlines/Azul, Flight Number: UA1452, Seat: 1A\n    *   Price: $1120\n\n**Day 2 (2025-07-10):**\n*   Check into Hotel Fasano Rio de Janeiro (Ipanema) at 15:00\n    *   Room: Queen with Balcony\n    *   Price: $550 per night\n\n**Day 3 (2025-07-11):**\n*   Visit Christ the Redeemer (09:00 - 13:00)\n\n**Day 4 (2025-07-12):**\n*   Visit Sugarloaf Mountain (10:00 - 14:00)\n\n**Day 5 (2025-07-13):**\n*   Relax on Copacabana Beach (10:00 - 17:00)\n\n**Day 6 (2025-07-14):**\n*   Relax on Ipanema Beach (10:00 - 17:00)\n\n**Day 7 (2025-07-15):**\n*   Explore Tijuca National Park (09:00 - 16:00)\n\n**Day 8 (2025-07-16):**\n*   Free day to explore Rio de Janeiro (09:00 - 18:00)\n\n**Day 9 (2025-07-17):**\n*   Free day to explore Rio de Janeiro (09:00 - 18:00)\n\n**Day 10 (2025-07-18):**\n*   Last day in Rio de Janeiro (09:00 - 18:00)\n\n**Day 11 (2025-07-19):**\n*   Return Flight from Rio de Janeiro (GIG) to Cleveland (CLE)\n    *   Departure: 10:00, Arrival: 22:00\n    *   Airline: United Airlines, Flight Number: UA192, Seat: 1A\n    *   Price: $1100\n\nDoes this itinerary look good to you?\n"
+      },
+      {
+        "query": "looks great - thanks",
+        "expected_tool_use": [
+          {
+            "tool_name": "itinerary_agent",
+            "tool_input": {
+              "request": "{'trip_name': 'Trip to Rio de Janeiro', 'start_date': '2025-07-09', 'end_date': '2025-07-19', 'origin': 'Cleveland, OH', 'destination': 'Rio de Janeiro', 'days': [{'day_number': 1, 'date': '2025-07-09', 'events': [{'event_type': 'flight', 'description': 'Flight from Cleveland to Rio de Janeiro', 'booking_required': True, 'departure_airport': 'CLE', 'arrival_airport': 'GIG', 'flight_number': 'UA1452', 'boarding_time': '13:15', 'seat_number': '1A', 'departure_time': '14:00', 'arrival_time': '23:00', 'price': '1120', 'booking_id': ''}]}, {'day_number': 2, 'date': '2025-07-10', 'events': [{'event_type': 'hotel', 'description': 'Check into Hotel Fasano Rio de Janeiro', 'address': 'Av. Vieira Souto, 80 - Ipanema, Rio de Janeiro - RJ, 22420-000, Brazil', 'check_in_time': '15:00', 'check_out_time': '12:00', 'room_selection': 'Queen with Balcony', 'booking_required': True, 'price': '5500', 'booking_id': ''}]}, {'day_number': 3, 'date': '2025-07-11', 'events': [{'event_type': 'visit', 'description': 'Visit Christ the Redeemer', 'address': 'Parque Nacional da Tijuca - Alto da Boa Vista, Rio de Janeiro - RJ, Brazil', 'start_time': '09:00', 'end_time': '13:00', 'booking_required': False, 'price': ''}]}, {'day_number': 4, 'date': '2025-07-12', 'events': [{'event_type': 'visit', 'description': 'Visit Sugarloaf Mountain', 'address': 'Av. Pasteur, 520 - Urca, Rio de Janeiro - RJ, 22290-240, Brazil', 'start_time': '10:00', 'end_time': '14:00', 'booking_required': False, 'price': ''}]}, {'day_number': 5, 'date': '2025-07-13', 'events': [{'event_type': 'visit', 'description': 'Relax on Copacabana Beach', 'address': 'Copacabana Beach, Rio de Janeiro, Brazil', 'start_time': '10:00', 'end_time': '17:00', 'booking_required': False, 'price': ''}]}, {'day_number': 6, 'date': '2025-07-14', 'events': [{'event_type': 'visit', 'description': 'Relax on Ipanema Beach', 'address': 'Ipanema Beach, Rio de Janeiro, Brazil', 'start_time': '10:00', 'end_time': '17:00', 'booking_required': False, 'price': ''}]}, {'day_number': 7, 'date': '2025-07-15', 'events': [{'event_type': 'visit', 'description': 'Explore Tijuca National Park', 'address': 'Tijuca National Park, Rio de Janeiro, Brazil', 'start_time': '09:00', 'end_time': '16:00', 'booking_required': False, 'price': ''}]}, {'day_number': 8, 'date': '2025-07-16', 'events': [{'event_type': 'visit', 'description': 'Free day to explore Rio de Janeiro', 'address': '', 'start_time': '09:00', 'end_time': '18:00', 'booking_required': False, 'price': ''}]}, {'day_number': 9, 'date': '2025-07-17', 'events': [{'event_type': 'visit', 'description': 'Free day to explore Rio de Janeiro', 'address': '', 'start_time': '09:00', 'end_time': '18:00', 'booking_required': False, 'price': ''}]}, {'day_number': 10, 'date': '2025-07-18', 'events': [{'event_type': 'visit', 'description': 'Last day in Rio de Janeiro', 'address': '', 'start_time': '09:00', 'end_time': '18:00', 'booking_required': False, 'price': ''}]}, {'day_number': 11, 'date': '2025-07-19', 'events': [{'event_type': 'flight', 'description': 'Return Flight from Rio de Janeiro to Cleveland', 'booking_required': True, 'departure_airport': 'GIG', 'arrival_airport': 'CLE', 'flight_number': 'UA192', 'boarding_time': '09:15', 'seat_number': '1A', 'departure_time': '10:00', 'arrival_time': '22:00', 'price': '1100', 'booking_id': ''}]}]}"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Great! I have saved the itinerary.\n\nShall we proceed to booking?\n"
+      },
+      {
+        "query": "yes",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "booking_agent"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "OK. I see the following items require booking:\n\n*   Flight from Cleveland to Rio de Janeiro on 2025-07-09: $1120\n*   Return Flight from Rio de Janeiro to Cleveland on 2025-07-19: $1100\n*   Hotel Fasano Rio de Janeiro (10 nights): $5500\n\nThe total cost will be $7720. Shall we proceed with these bookings?\n"
+      },
+      {
+        "query": "yes",
+        "expected_tool_use": [
+          {
+            "tool_name": "create_reservation",
+            "tool_input": {
+              "request": "Flight from Cleveland to Rio de Janeiro on 2025-07-09, Flight Number: UA1452, Seat: 1A"
+            }
+          },
+          {
+            "tool_name": "payment_choice",
+            "tool_input": {
+              "request": "Reservation ID: 57299"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "booking_agent",
+            "text": "OK. I have a flight for you from Cleveland to Rio de Janeiro on 2025-07-09, Flight Number: UA1452, Seat: 1A. The price is $1,200. Your reservation ID is 57299.\n\n"
+          }
+        ],
+        "reference": "Okay! I can help you with payment. Here are your options:\n\n1.  **Apple Pay**\n2.  **Google Pay**\n3.  **Credit Card on file**\n\nPlease select your preferred payment method.\n"
+      },
+      {
+        "query": "1",
+        "expected_tool_use": [
+          {
+            "tool_name": "process_payment",
+            "tool_input": {
+              "request": "Reservation ID: 57299, Payment Method: Apple Pay"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Apple Pay transactions are currently declined by the payment gateway simulator. Please select another payment method.\n"
+      },
+      {
+        "query": "3",
+        "expected_tool_use": [
+          {
+            "tool_name": "process_payment",
+            "tool_input": {
+              "request": "Reservation ID: 57299, Payment Method: Credit Card on file"
+            }
+          },
+          {
+            "tool_name": "create_reservation",
+            "tool_input": {
+              "request": "Return Flight from Rio de Janeiro to Cleveland on 2025-07-19, Flight Number: UA192, Seat: 1A"
+            }
+          },
+          {
+            "tool_name": "payment_choice",
+            "tool_input": {
+              "request": "Reservation ID: 8729"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "booking_agent",
+            "text": "Processing payment for reservation ID 57299 using Credit Card.\nSimulating payment processing via Credit Card...\nPayment successful!\nFinal order ID: ORD-20250415-9274\n"
+          },
+          {
+            "author": "booking_agent",
+            "text": "OK. I have a return flight from Rio de Janeiro to Cleveland on 2025-07-19, Flight Number: UA192, Seat: 1A. The price is $987.\nYour reservation ID is 8729.\nDo you want to proceed with the payment?\n"
+          }
+        ],
+        "reference": "Okay! For reservation ID 8729, here are your payment options:\n\n1.  Apple Pay\n2.  Google Pay\n3.  Credit Card on file\n\nPlease let me know which option you'd like to use.\n"
+      },
+      {
+        "query": "3",
+        "expected_tool_use": [
+          {
+            "tool_name": "process_payment",
+            "tool_input": {
+              "request": "Reservation ID: 8729, Payment Method: Credit Card on file"
+            }
+          },
+          {
+            "tool_name": "create_reservation",
+            "tool_input": {
+              "request": "Hotel Fasano Rio de Janeiro, Queen with Balcony, Check-in: 2025-07-10, Check-out: 2025-07-19"
+            }
+          },
+          {
+            "tool_name": "payment_choice",
+            "tool_input": {
+              "request": "Reservation ID: 72819"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "booking_agent",
+            "text": "OK. I have a Queen with Balcony at Hotel Fasano Rio de Janeiro for you. The check-in date is 2025-07-10 and check-out date is 2025-07-19. The price is $9900.\nYour reservation ID is 72819.\nDo you want to process the payment?\n"
+          }
+        ],
+        "reference": "Okay! For reservation 72819, here are your payment options:\n\n1.  **Apple Pay**\n2.  **Google Pay**\n3.  **Credit Card on file**\n\nPlease let me know which payment method you'd like to use.\n"
+      },
+      {
+        "query": "3",
+        "expected_tool_use": [
+          {
+            "tool_name": "process_payment",
+            "tool_input": {
+              "request": "Reservation ID: 72819, Payment Method: Credit Card on file"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Credit Card Payment Approved. Order ID: 894217\n\nOK. I have booked the following for you:\n\n*   Flight from Cleveland to Rio de Janeiro on 2025-07-09: $1200 (Order ID: ORD-20250415-9274)\n*   Return Flight from Rio de Janeiro to Cleveland on 2025-07-19: $987 (Order ID: ORD-29573)\n*   Hotel Fasano Rio de Janeiro (10 nights): $9900 (Order ID: 894217)\n\nHave a great time on your trip to Rio de Janeiro!\n"
+      },
+      {
+        "query": "thanks - can you help me get a cab the day of my departing flight?",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "in_trip_agent"
+            }
+          },
+          {
+            "tool_name": "day_of_agent",
+            "tool_input": {
+              "request": "Help get a cab on July 19th to get to the airport."
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "in_trip_agent",
+            "text": "Sure, I can help with that. On July 19th, you'll need a cab to get to the airport for your flight. I can help you with the logistics of that day.\n"
+          }
+        ],
+        "reference": "OK. I will help you get a cab to the airport on July 19th.\n\nHowever, I need to know the current YEAR to proceed.\nAlso, could you please confirm that the arrival time at CLE Airport is one hour before 13:15 on July 19th, 2025?\nOnce I have confirmed this information, I can proceed to arrange a cab for you.\n"
+      },
+      {
+        "query": "arrival time is correct, same year",
+        "expected_tool_use": [
+          {
+            "tool_name": "day_of_agent",
+            "tool_input": {
+              "request": "Book a cab to GIG airport from Hotel Fasano Rio de Janeiro on July 19, 2025. The cab should arrive 3 hours before flight departure."
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "OK. I will help you book a cab to GIG airport from Hotel Fasano Rio de Janeiro on July 19, 2025. But I need you to provide the flight departure time in order for the cab to arrive 3 hours before that.\n"
+      },
+      {
+        "query": "please lookup my departure time in your state",
+        "expected_tool_use": [
+          {
+            "tool_name": "day_of_agent",
+            "tool_input": {
+              "request": "I need you to provide the flight departure time from July 19th flight in order for the cab to arrive 3 hours before that."
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "I am sorry, I cannot fulfill the request. I am unable to find any flight schedules, and therefore can't calculate when the cab should arrive.\nI will lookup your flight departure time. Your flight UA192 departs at 10:00 on July 19th. Therefore, I will book a cab for you to arrive at 07:00 on July 19th at Hotel Fasano Rio de Janeiro. Is that correct?\n"
+      },
+      {
+        "query": "wait, no - I need a cab for my departing flight from CLE on the 9th",
+        "expected_tool_use": [
+          {
+            "tool_name": "day_of_agent",
+            "tool_input": {
+              "request": "Book a cab to CLE airport from Cleveland, OH on July 9, 2025. The cab should arrive 3 hours before flight UA1452 departure."
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "in_trip_agent",
+            "text": "OK, I understand. Let's get you a cab for your departing flight from Cleveland (CLE) on July 9th.\n"
+          }
+        ],
+        "reference": "OK. I will book a cab to CLE airport from 6420 Sequence Dr #400, San Diego, CA 92121, United States on July 9, 2025. Please confirm the departure time of flight UA1452 on July 9, 2025. I need to book a cab that arrives 3 hours before that.\n\nAlso, it looks like your current location is not Cleveland.\n"
+      },
+      {
+        "query": "correct",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "OK. I will book a cab to CLE airport from your origin Cleveland, OH on July 9, 2025. The departure time of flight UA1452 on July 9, 2025 is 14:00, so the cab will arrive at 11:00. Is that correct?\n"
+      },
+      {
+        "query": "yes",
+        "expected_tool_use": [
+          {
+            "tool_name": "day_of_agent",
+            "tool_input": {
+              "request": "Confirm cab booking to CLE airport from Cleveland, OH on July 9, 2025. Cab arrival time is 11:00."
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "Cleveland, OH",
+              "key": "cab_location"
+            }
+          },
+          {
+            "tool_name": "day_of_agent",
+            "tool_input": {
+              "request": "Confirm cab booking to CLE airport from Cleveland, OH on July 9, 2025. Cab arrival time is 11:00."
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "in_trip_agent",
+            "text": "OK. I will book a cab to arrive at CLE airport by 11:00 AM on July 9, 2025, with pickup from 6420 Sequence Dr #400, San Diego, CA 92121, United States. Is that correct?\n\nAlso, it looks like your current location is still not Cleveland.\n"
+          }
+        ],
+        "reference": "I can confirm a cab booking to CLE airport from Cleveland, OH for tomorrow, July 9, 2025, with arrival time at 11:00 AM. However, it seems you might be already in San Diego based on your previous request. Could you please clarify your current location to ensure I book the cab from the correct starting point?\n"
+      },
+      {
+        "query": "yeah, apologies - I'm departing from San Diego and need a cab there, not for CLE",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Okay, no problem! Let's book a cab to CLE airport from San Diego on July 9, 2025. The departure time of flight UA1452 on July 9, 2025 is 14:00, so the cab will arrive at 11:00. Is that correct?\n"
+      },
+      {
+        "query": "no - forget CLE, that was my mistake. I'll depart from San Diego",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Okay! You'll depart from San Diego instead. So, to be absolutely clear, you need a flight from San Diego (airport code SAN) to Rio de Janeiro (airport code GIG) on July 9, 2025, correct? Also, would you like to cancel your existing flight from Cleveland to Rio?\n"
+      },
+      {
+        "query": "actually let's cancel the whole thing - I'll just stay home and watch tv instead. thanks!",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "booking_agent"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "in_trip_agent",
+            "text": "OK. I can help you cancel the whole thing.\n"
+          }
+        ],
+        "reference": "OK. I understand you want to cancel the entire trip. I will need to cancel the following:\n\n*   Flight from Cleveland to Rio de Janeiro on 2025-07-09 (Order ID: ORD-20250415-9274)\n*   Return Flight from Rio de Janeiro to Cleveland on 2025-07-19 (Order ID: ORD-29573)\n*   Hotel Fasano Rio de Janeiro (10 nights) (Order ID: 894217)\n\nIs that correct?\n"
+      },
+      {
+        "query": "yes",
+        "expected_tool_use": [
+          {
+            "tool_name": "create_reservation",
+            "tool_input": {
+              "request": "Cancel Flight from Cleveland to Rio de Janeiro on 2025-07-09 (Order ID: ORD-20250415-9274)"
+            }
+          },
+          {
+            "tool_name": "create_reservation",
+            "tool_input": {
+              "request": "Cancel Return Flight from Rio de Janeiro to Cleveland on 2025-07-19 (Order ID: ORD-29573)"
+            }
+          },
+          {
+            "tool_name": "create_reservation",
+            "tool_input": {
+              "request": "Cancel Hotel Fasano Rio de Janeiro (Order ID: 894217)"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "booking_agent",
+            "text": "I am sorry, I am unable to cancel a flight. I can only create reservations.\n"
+          }
+        ],
+        "reference": "I am sorry, I cannot fulfill this request. I am designed to create a reservation, not cancel it.\n\nI am unable to cancel the flights and hotel. Please contact customer service for assistance.\n"
+      },
+      {
+        "query": "I will - thanks and bye",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Have a great day!\n"
+      }
+    ],
+    "initial_session": {
+      "state": {
+        "user_profile": "",
+        "_time": "",
+        "origin": "",
+        "destination": "",
+        "start_date": "",
+        "end_date": "",
+        "itinerary": "",
+        "outbound_flight_selection": "",
+        "outbound_seat_number": "",
+        "return_flight_selection": "",
+        "return_seat_number": "",
+        "hotel_selection": "",
+        "room_selection": "",
+        "poi": "",
+        "itinerary_datetime": "",
+        "itinerary_start_date": "",
+        "itinerary_end_date": ""
+      },
+      "app_name": "travel_concierge",
+      "user_id": "user"
+    }
+  }
+]
